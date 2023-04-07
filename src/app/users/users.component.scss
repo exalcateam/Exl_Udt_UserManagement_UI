@@ -1,0 +1,48 @@
+ .body{
+   
+    min-height: 100vh;
+ }
+
+button {
+    color:rgb(78, 96, 255);
+}
+button:hover{
+    background-color:rgb(78, 96, 255);
+    color: white;
+}
+ 
+table {
+    border-collapse: separate; 
+    border-spacing: 1em;
+   
+    th {
+        color:rgb(78, 96, 255);
+       
+         
+      }
+    
+     
+    
+     
+   tr:hover{
+    th{
+         background-color: white;
+    }
+    td{
+        color: white;
+    }
+    button{
+        color: white;
+    }
+    button:hover{
+        background-color:white;
+        color:rgb(78, 96, 255);
+    }
+    background-color:rgb(78, 96, 255);
+    
+   }
+
+}
+ 
+   
+ 

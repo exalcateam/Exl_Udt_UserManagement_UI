@@ -1,0 +1,54 @@
+<div style="text-align: center;     background: linear-gradient(-2deg,rgb(93, 93, 204),rgba(88, 204, 250, 0.774), rgba(0, 183, 255, 0.788),rgb(105, 105, 235));
+">
+    <h1 mat-dialog-title >Edit User </h1>
+    <div class="container-fluid "  mat-dialog-content >
+  
+      <form [formGroup]="addUser" class="row">
+        <div class="col-6">
+          <div><mat-form-field>
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="Name">
+          </mat-form-field></div>
+  
+        <div><mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field></div>
+  
+        <div><mat-form-field>
+            <mat-label>Mobile</mat-label>
+            <input type="tel" matInput formControlName="phone">
+          </mat-form-field></div>
+        </div>
+  
+        <div class="col-6">
+          <div><mat-form-field>
+            <mat-label>DOB</mat-label>
+            <input matInput formControlName="dob">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+          </mat-form-field></div>
+  
+        <div><mat-form-field>
+            <mat-label>Department</mat-label>
+            <input type="text" matInput formControlName="department">
+          </mat-form-field></div>
+  
+        <div><mat-form-field>
+            <mat-label>Role</mat-label>
+            <input type="text" matInput formControlName="role">
+          </mat-form-field></div>
+        </div>
+  
+          <div mat-dialog-actions class="d-flex justify-content-center">
+            <button mat-raised-button [mat-dialog-close]="addUser.value" [disabled]="!addUser.valid">Save</button>
+            <button mat-raised-button mat-dialog-close>Cancel</button>
+        
+          </div>
+  
+      </form>
+    </div>
+    
+  
+  
+  
+  </div>

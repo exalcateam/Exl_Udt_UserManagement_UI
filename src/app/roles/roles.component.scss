@@ -1,0 +1,28 @@
+.body {
+    
+    min-height: 90.3vh;
+}
+
+ 
+
+table {
+    
+    th {
+       
+         color:rgb(78, 96, 255);
+        
+
+    }
+    tr:hover{
+       
+        td,button{
+            color: white;
+        }
+        background-color:rgb(78, 96, 255);
+         
+    }
+}
+
+.card-body:hover {
+    cursor: pointer;
+}

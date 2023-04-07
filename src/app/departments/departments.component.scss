@@ -1,0 +1,30 @@
+.body {
+    
+  
+    min-height: 100vh;
+     font-family: 'Times New Roman', Times, serif;
+
+}
+ 
+h2{
+    font-family: 'Times New Roman', Times, serif; 
+    color: white;
+    
+}
+table{
+    
+        th{
+            background-color:rgb(78, 96, 255);
+            color: white;
+         
+    }
+    
+}
+
+.card-body:hover{
+cursor: pointer;
+}
+ button:disabled{
+    color: aqua;
+     cursor: not-allowed;
+ }

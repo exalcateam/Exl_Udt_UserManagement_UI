@@ -1,0 +1,37 @@
+<div class="body d-flex">
+    <div class="container">
+        <div class="row">
+            <div style="padding-top: 10px;">
+                <button mat-fab extended color="#" (click)="addDept()" ><mat-icon>add</mat-icon>Add Department</button>
+            </div>
+            <div class="col-md-3" *ngFor="let data of dept;let i=index" style="text-align: center;">
+                <div class="card mb-1">
+                    <div class="card-body" (click)="selectDepartment(data)" mat-ripple  >
+                        {{data}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="selectedDepartment">
+            <h2>{{selectedDepartment}}</h2>
+
+            <table mat-table [dataSource]="ds">
+                <ng-container matColumnDef="role">
+                    <th mat-header-cell *matHeaderCellDef>Role</th>
+                    <td mat-cell *matCellDef="let data">{{data.Role}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="users">
+                    <th mat-header-cell *matHeaderCellDef>Users</th>
+                    <td mat-cell *matCellDef="let data"><button mat-button (click)="showUserDetails(data)" title="Department : {{data.Department}}">{{data.Name}}</button></td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="cols"></tr>
+                <tr mat-row *matRowDef="let row;columns:cols;"></tr>
+            </table>
+
+        </div>
+       
+    </div>
+</div>

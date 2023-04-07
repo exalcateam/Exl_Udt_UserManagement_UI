@@ -1,0 +1,35 @@
+.body {
+    
+    background-image: url(../../assets/bg.jpeg);
+    background-size: cover;
+    height: 90.3vh;
+     font-family: 'Times New Roman', Times, serif;
+
+}
+ 
+.row{
+    button{
+        background-color:rgb(36, 36, 255);
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        float: right;
+       
+    }
+}
+ 
+h2{
+    font-family: 'Times New Roman', Times, serif; 
+    color: white;
+    
+}
+table{
+        th{
+        background-color: blue;
+        color: white;
+    }
+    
+}
+
+.card-body:hover{
+cursor: pointer;
+}

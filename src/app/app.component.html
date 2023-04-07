@@ -1,0 +1,49 @@
+<mat-toolbar class="container-fluid" *ngIf="showToolbar">
+    <div class="col-1 d-flex justify-content-center  ">
+        <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button> 
+    </div>
+    <div class="col-6 d-flex justify-content-center" >
+        <h2 style="font-family: 'Times New Roman', Times, serif; margin-top: 15px; ">USER MANAGEMENT</h2>
+       
+    </div>
+    <div  class="d-flex col-5 justify-content-end">
+        
+        <button mat-icon-button    [mat-menu-trigger-for]="menu" ><mat-icon>account_circle</mat-icon></button>
+       <mat-menu #menu style=" background: linear-gradient(-2deg,rgb(93, 93, 204),rgba(88, 204, 250, 0.774), rgba(0, 183, 255, 0.788),rgb(105, 105, 235));">
+        <div class="btnh" >
+            <button mat-button id="btnh"  ><mat-icon>account_circle</mat-icon >{{name}}</button>
+                <button mat-button id="btnh"  ><mat-icon>email</mat-icon>{{email}}</button> 
+                <button mat-button routerLink="/changePassword"><mat-icon>edit</mat-icon> Change Password?</button>  
+                <button mat-button (click)="logout()" ><mat-icon>logout</mat-icon>Logout</button>
+        </div>
+       </mat-menu>
+       <button mat-icon-button><mat-icon>settings</mat-icon></button>
+    </div>
+</mat-toolbar>
+<mat-drawer-container style="height: 90vh;" >
+    <mat-drawer #drawer >
+        <div class="d-grid">
+             <hr>
+            <button (click)="drawer.toggle()" mat-button routerLink="/dashboard"><mat-icon>home</mat-icon>Home</button>
+            <button (click)="drawer.toggle()" mat-button routerLink="/myProfile" ><mat-icon>account_circle</mat-icon>My Profile</button>
+            <button (click)="drawer.toggle()" mat-button routerLink="/users"><mat-icon>supervised_user_circle</mat-icon>Users</button>
+            <button (click)="drawer.toggle()" mat-button routerLink="/dept"><mat-icon>dns</mat-icon>Departments</button>
+            <button (click)="drawer.toggle()" mat-button routerLink="/roles"><mat-icon>open_in_new</mat-icon>Roles</button>
+            <button (click)="drawer.toggle()" (click)="logout()" mat-button><mat-icon>logout</mat-icon>Logout</button>
+            <hr>
+            <button (click)="drawer.toggle()"mat-button><mat-icon>info</mat-icon><a href="https://exalca.com">About us</a></button>
+            <button (click)="drawer.toggle()" mat-button><mat-icon>help</mat-icon><a href="https://exalca.com">Help</a></button>
+            <button (click)="drawer.toggle()" mat-button><mat-icon>chat</mat-icon><a href="https://exalca.com">Contact</a></button>
+
+        </div>
+    </mat-drawer>
+    <mat-drawer-content style="height: 100vh;">
+  
+        <router-outlet></router-outlet>
+        
+    </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+ 

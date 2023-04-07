@@ -1,0 +1,54 @@
+mat-toolbar {
+    height: 10vh;
+    position: sticky;
+    top: 0px;
+ //   background: linear-gradient(-2deg, rgb(35, 35, 255), rgba(88, 204, 250, 0.774), rgba(0, 183, 255, 0.788), rgba(35, 35, 255, 0.733) );
+ background-color:rgb(78, 96, 255);
+    color: white;
+}
+
+mat-drawer {
+    background-color: transparent;
+    width: 150px;
+
+    button {
+
+        color: rgba(255, 255, 255, 0.603);
+        background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+        
+        display: inline-block;
+        padding: 0 .5em 0.2em;
+        text-decoration: none;
+        transition: background-size 0.5s;
+    }
+
+    button:hover {
+        color: white;
+       background-color: rgba(240, 248, 255, 0.425);
+        --underline-width: 100%;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+
+#btn {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#btnh:hover {
+    cursor: default;
+}
+
+.btnh {
+    margin-left: 20px;
+}
+
+img {
+    height: 30px;
+    width: 100px;
+    margin-top: 12px;
+
+}

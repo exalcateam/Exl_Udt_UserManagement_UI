@@ -1,0 +1,51 @@
+<button (click)="next()">Go</button>
+
+<table mat-table [dataSource]="dataSource"> 
+
+    <ng-container matColumnDef="no">
+        <th mat-header-cell *matHeaderCellDef >S.No</th>
+        <td mat-cell *matCellDef="let data">{{data.no}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="ticket_Id">
+        <th mat-header-cell *matHeaderCellDef >Ticket ID</th>
+        <td mat-cell *matCellDef="let data">{{data.ticket_Id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="task">
+        <th mat-header-cell *matHeaderCellDef >Task</th>
+        <td mat-cell *matCellDef="let data">{{data.task}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="person">
+        <th mat-header-cell *matHeaderCellDef >Person</th>
+        <td mat-cell *matCellDef="let data">{{data.person}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="assign">
+        <th mat-header-cell *matHeaderCellDef>Created Date</th>
+        <td mat-cell *matCellDef="let data" >{{data.assign}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="open">
+        <th mat-header-cell *matHeaderCellDef >Open</th>
+        <td mat-cell *matCellDef="let data">{{data.openDate}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef >Status</th>
+        <td mat-cell *matCellDef="let data">{{data.status}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit" > 
+        <th mat-header-cell *matHeaderCellDef>Change Person</th>
+        <td mat-cell *matCellDef="let data;let i=index">
+          <button mat-icon-button (click)="edit(data,i)" >
+            <mat-icon>mode_edit</mat-icon> </button>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="cols; sticky:true"></tr>
+        <tr mat-row *matRowDef="let row; columns:cols;"></tr>
+</table>

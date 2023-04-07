@@ -1,0 +1,80 @@
+<div style="text-align: center;     background: linear-gradient(-2deg,rgb(93, 93, 204),rgba(88, 204, 250, 0.774), rgba(0, 183, 255, 0.788),rgb(105, 105, 235));">
+
+  <div class="container-fluid" mat-dialog-content>
+
+    <form [formGroup]="addUser" class="row">
+      <!-- <div>
+        <input type="file" formControlName="photo">
+      </div> -->
+      <div class="col-md-6">
+        <div><mat-form-field>
+            <mat-label>Emp_ID</mat-label>
+            <input type="text" matInput formControlName="Emp_ID">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Username</mat-label>
+            <input type="text" matInput formControlName="Username">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Password</mat-label>
+            <input type="text" matInput formControlName="Password">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="Name">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="Email">
+          </mat-form-field></div>
+
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div><mat-form-field>
+            <mat-label>Phone No</mat-label>
+            <input type="tel" matInput formControlName="Phone">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>DOB</mat-label>
+            <input type="text" matInput formControlName="DOB">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Department</mat-label>
+            <input type="text" matInput formControlName="Department">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Role</mat-label>
+            <input type="text" matInput formControlName="Role">
+          </mat-form-field></div>
+
+        <div><mat-form-field>
+            <mat-label>Type</mat-label>
+            <input type="tel" matInput formControlName="Type">
+          </mat-form-field></div>
+      </div>
+
+      <div mat-dialog-actions class="justify-content-center">
+
+        <button mat-raised-button [mat-dialog-close]="addUser.value" [disabled]="!addUser.valid">Save</button>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+
+      </div>
+
+    </form>
+  </div>
+
+
+
+
+</div>

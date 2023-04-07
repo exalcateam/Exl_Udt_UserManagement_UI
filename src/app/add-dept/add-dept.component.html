@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-form-field appearance="outline">
+         
+        <input matInput type="text" #deptName>
+    </mat-form-field>
+    <div>
+        <button mat-button [mat-dialog-close]="deptName.value" (click)="temp(deptName.value)">Add</button>
+        <button mat-button mat-dialog-close>Cancel</button>
+    </div>
+</div>

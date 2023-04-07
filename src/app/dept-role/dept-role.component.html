@@ -1,0 +1,40 @@
+<div class="body d-flex">
+    <div class="container">
+        <div class="row">
+            <div>
+                <button mat-button (click)="add()"><mat-icon>add</mat-icon>Add {{x}} </button>
+            </div>
+            <div class="col-md-3" *ngFor="let data of deptRole">
+                <div class="card mb-1">
+                    <div class="card-body" (click)="select(data)">
+                        {{data}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="selected ">
+            <h2>{{selected }}</h2>
+
+            <table mat-table [dataSource]="ds">
+                <ng-container matColumnDef="role" >
+                    <th mat-header-cell *matHeaderCellDef>Role</th>
+                    <td mat-cell *matCellDef="let data"> {{data.role}}  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="dept" >
+                    <th mat-header-cell *matHeaderCellDef>Department</th>
+                    <td mat-cell *matCellDef="let data"> {{data.dept}}  </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="users" >
+                    <th mat-header-cell *matHeaderCellDef>{{cols[1]}}</th>
+                    <td mat-cell *matCellDef="let data"><button mat-button (click)="showUserDetails(data)">{{data.name}} </button></td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="rows"></tr>
+                <tr mat-row *matRowDef="let row;columns:rows;"></tr>
+            </table>
+
+        </div>
+    </div>
+</div>
